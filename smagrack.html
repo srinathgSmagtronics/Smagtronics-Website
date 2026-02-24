@@ -3,132 +3,108 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SmagRack — Intelligent Rack & iPDU Systems</title>
-
+  <title>SmagRack — Intelligent Rack Power Distribution</title>
   <link rel="stylesheet" href="assets.css">
 </head>
 
-<body class="smagrack-dark">
+<body>
 
-<header style="background:#0d1117; border-bottom:1px solid var(--rack-border);">
+<header>
   <div class="container header-grid">
-    <div class="brand">
-      <a href="index.html"><img src="static/smagtronics_logo.png" class="logo-sm"></a>
-      <div>
-        <div class="brand-title" style="color:white;">SmagRack</div>
-        <div class="brand-tag" style="color:#acb5c4;">Intelligent iPDU & Rack Power</div>
-      </div>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <img src="static/smagtronics_logo.png" style="height:36px;">
+      <strong>SmagRack</strong>
     </div>
+
     <nav>
-      <a href="index.html" style="color:#e8ecf1;">Home</a>
-      <a href="smagwell.html" style="color:#e8ecf1;">SmagWell</a>
-      <a href="smartbed-dashboard.html" style="color:#e8ecf1;">Dashboard</a>
-      <a href="smagrack.html" style="color:#00e0ff;">SmagRack</a>
+      <a href="index.html">Home</a>
+      <a href="smagwell.html">SmagWell</a>
+      <a href="smagrack.html">SmagRack</a>
     </nav>
   </div>
 </header>
 
-<section class="smagrack-hero">
+<section class="container hero">
+  <h1>SmagRack Intelligent Power Distribution Units</h1>
+  <p>
+    Industrial-grade rack power distribution engineered for telecom, enterprise IT,
+    and mission-critical infrastructure environments. Available in Lite and Enterprise series.
+  </p>
+
+  <a class="btn btn-primary" href="#">Explore Product Families</a>
+  <a class="btn btn-outline" href="#">Launch Variant Selector</a>
+</section>
+
+<section class="container">
+  <h2>Product Families</h2>
+
+  <div class="grid-2">
+
+    <div class="card">
+      <h3>Lite Series</h3>
+      <p>Optimised for telecom racks and control panels.</p>
+      <ul>
+        <li>Input-level metering</li>
+        <li>Master ON/OFF switching</li>
+        <li>Single NIC</li>
+        <li>Single & Three Phase options</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Enterprise Series</h3>
+      <p>Designed for data centres and critical infrastructure.</p>
+      <ul>
+        <li>Outlet-level metering</li>
+        <li>Per-outlet switching (mandatory)</li>
+        <li>Dual NIC</li>
+        <li>SNMPv3, Modbus TCP, REST API</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="container">
+  <h2>Portfolio Overview</h2>
+
+  <table>
+    <tr>
+      <th>Series</th>
+      <th>Phase</th>
+      <th>Current</th>
+      <th>Mounting</th>
+      <th>Metering</th>
+      <th>Switching</th>
+    </tr>
+
+    <tr>
+      <td>Lite</td>
+      <td>Single / Three</td>
+      <td>16A / 32A</td>
+      <td>Vertical / Horizontal</td>
+      <td>Input</td>
+      <td>Master</td>
+    </tr>
+
+    <tr>
+      <td>Enterprise</td>
+      <td>Three</td>
+      <td>32A / 63A</td>
+      <td>Vertical / Horizontal</td>
+      <td>Outlet</td>
+      <td>Per Outlet</td>
+    </tr>
+
+  </table>
+</section>
+
+<footer>
   <div class="container">
-    <h1>Intelligent iPDUs for High-Density Data Centres</h1>
-    <p>Advanced outlet metering, remote switching, sensors and redundancy engineered for IT uptime.</p>
-
-    <!-- OPTIONAL HERO IMAGE -->
-    <img src="images/datacentre-hero.png" 
-         style="width:100%; margin-top:24px; border-radius:10px;" 
-         alt="Datacentre Hero">
-  </div>
-</section>
-
-<!-- VALUE PROPS -->
-<section class="container" style="margin-top:40px;">
-  <h2 style="color:var(--rack-text); margin-bottom:20px;">Value We Deliver to Data Centres</h2>
-
-  <div class="features-grid">
-    <div class="feature-card" style="background:var(--rack-card); color:var(--rack-text); border:1px solid var(--rack-border);">
-      <h3>Energy Efficiency</h3><p>Outlet-level metering reduces wasted energy & improves PUE.</p>
-    </div>
-    <div class="feature-card" style="background:var(--rack-card); color:var(--rack-text); border:1px solid var(--rack-border);">
-      <h3>Remote Management</h3><p>Reboot servers, control outlets and automate sequencing.</p>
-    </div>
-    <div class="feature-card" style="background:var(--rack-card); color:var(--rack-text); border:1px solid var(--rack-border);">
-      <h3>Redundancy & Uptime</h3><p>Dual NIC, dual feed, and hot-swap control modules.</p>
-    </div>
-    <div class="feature-card" style="background:var(--rack-card); color:var(--rack-text); border:1px solid var(--rack-border);">
-      <h3>Sensing & Analytics</h3><p>Temperature, humidity, airflow and smoke monitoring.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PRODUCT LINEUP -->
-<section class="container" style="margin-top:40px;">
-  <h2 style="color:var(--rack-text); margin-bottom:20px;">SmagRack iPDU Series</h2>
-
-  <div class="ipdu-grid">
-    <div class="ipdu-card">
-      <img src="images/ipdu-8-series.png">
-      <h3>SR-iPDU8</h3><p>8 switched outlets</p>
-    </div>
-
-    <div class="ipdu-card">
-      <img src="images/ipdu-16-series.png">
-      <h3>SR-iPDU16</h3><p>16 mixed outlets</p>
-    </div>
-
-    <div class="ipdu-card">
-      <img src="images/ipdu-24x-front.png">
-      <h3>SR-iPDU24X</h3><p>24-outlet high density</p>
-    </div>
-
-    <div class="ipdu-card">
-      <img src="images/ipdu-24x-back.png">
-      <h3>SR-iPDU24XR</h3><p>Redundant feed PDU</p>
-    </div>
-  </div>
-</section>
-
-<!-- ACCESSORIES -->
-<section class="container" style="margin-top:40px;">
-  <h2 style="color:var(--rack-text); margin-bottom:20px;">Rack Infrastructure & Accessories</h2>
-
-  <div class="ipdu-grid">
-    <div class="ipdu-card">
-      <img src="images/cable-management.png">
-      <h3>Cable Management</h3><p>Vertical routing, cable troughs and bundling.</p>
-    </div>
-
-    <div class="ipdu-card">
-      <img src="images/cooling-system.png">
-      <h3>Cooling Solutions</h3><p>Airflow optimization and thermal control.</p>
-    </div>
-
-    <div class="ipdu-card">
-      <img src="images/sensors-environment.png">
-      <h3>Environmental Sensors</h3><p>Temp/humidity/airflow monitoring.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="container contact-strip" 
-         style="background:rgba(255,255,255,0.05); border:1px solid var(--rack-border);">
-  <div>
-    <h3 style="color:white;">Request Quotation</h3>
-    <p style="color:#9fb4c9;">Talk to our Data-Centre Engineering Team</p>
-  </div>
-
-  <a class="btn btn-primary" href="mailto:dc-sales@smagtronics.com">Contact Sales</a>
-</section>
-
-<footer style="background:#0d1117;">
-  <div class="container footer-grid">
-    <div style="display:flex; gap:12px;">
-      <img src="static/smagtronics_logo.png" class="logo-sm">
-      <div style="color:#9fb4c9;">© 2025 Smagtronics — SmagRack</div>
-    </div>
-    <div style="color:#9fb4c9;">iPDUs • Racks • Sensors</div>
+    © 2025 Smagtronics — Intelligent Rack Infrastructure
   </div>
 </footer>
 
 </body>
 </html>
+
