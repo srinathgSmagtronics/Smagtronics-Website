@@ -150,7 +150,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 30px;
-  table-layout: fixed;
+  table-layout: auto;
   overflow-x: auto;
   display: block;
 }
@@ -168,7 +168,7 @@ td {
   padding: 14px;
   border-bottom: 1px solid var(--color-border);
   font-size: 14px;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 tr:hover {
@@ -217,10 +217,17 @@ th:first-child {
   white-space: nowrap;
 }
 
+/* Model column */
 .model-col {
   white-space: nowrap;
   font-family: monospace;
   font-size: 13px;
 }
+
+/* Responsive safety */
+.table-wrapper {
+  overflow-x: auto;
+}
+
 
 
