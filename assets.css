@@ -142,25 +142,37 @@ h2::after {
   gap: 30px;
 }
 
-/* Table */
+/* ===============================
+   TABLE — INDUSTRIAL FORMAT
+================================ */
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 30px;
+  table-layout: fixed;
 }
 
 th {
   text-align: left;
   background: var(--color-bg-soft);
-  padding: 12px;
+  padding: 14px;
   font-size: 14px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-border);
 }
 
 td {
-  padding: 12px;
-  border-top: 1px solid var(--color-border);
+  padding: 14px;
+  border-bottom: 1px solid var(--color-border);
   font-size: 14px;
+  vertical-align: top;
 }
+
+tr:hover {
+  background: #fafbfc;
+}
+
 
 /* Footer */
 footer {
@@ -170,3 +182,4 @@ footer {
   font-size: 14px;
   color: var(--color-muted);
 }
+
