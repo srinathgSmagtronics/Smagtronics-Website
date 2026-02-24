@@ -215,4 +215,9 @@ th:first-child {
   white-space: nowrap;
 }
 
+.model-col {
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 13px;
+}
 
