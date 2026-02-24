@@ -117,7 +117,7 @@ function renderTable(data){
   data.forEach(p => {
     tbody.innerHTML += `
       <tr>
-        <td>${p.model}</td>
+        <td class="model-col">${p.model}</td>
         <td>${p.family}</td>
         <td>${p.phase}</td>
         <td>${p.current}A</td>
