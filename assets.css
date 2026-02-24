@@ -206,4 +206,13 @@ section {
   width: auto;
 }
 
+/* ===============================
+   MODEL COLUMN FORMAT
+================================ */
+
+td:first-child,
+th:first-child {
+  white-space: nowrap;
+}
+
 
