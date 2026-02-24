@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SmagRack Variant Selector</title>
+  <link rel="stylesheet" href="../../../assets.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container header-grid">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <img src="../../../static/smagtronics_logo.png" class="logo-sm">
+      <strong>SmagRack Variant Selector</strong>
+    </div>
+
+    <nav>
+      <a href="../../../index.html">Home</a>
+      <a href="../../../smagrack.html">SmagRack</a>
+    </nav>
+  </div>
+</header>
+
+<section class="container hero">
+  <h1>SmagRack Configuration Selector</h1>
+  <p>
+    Filter by electrical and mechanical parameters to identify the appropriate model
+    for your rack infrastructure.
+  </p>
+</section>
+
+<section class="container">
+
+  <h2>Filter Parameters</h2>
+
+  <div style="display:flex; gap:20px; flex-wrap:wrap; margin-bottom:30px;">
+
+    <select id="family">
+      <option value="">All Families</option>
+      <option value="Lite">Lite</option>
+      <option value="Enterprise">Enterprise</option>
+    </select>
+
+    <select id="phase">
+      <option value="">All Phases</option>
+      <option value="Single">Single Phase</option>
+      <option value="Three">Three Phase</option>
+    </select>
+
+    <select id="current">
+      <option value="">All Currents</option>
+      <option value="16">16A</option>
+      <option value="32">32A</option>
+      <option value="63">63A</option>
+    </select>
+
+    <select id="mounting">
+      <option value="">All Mounting</option>
+      <option value="Vertical">Vertical</option>
+      <option value="Horizontal">Horizontal</option>
+    </select>
+
+    <select id="daisy">
+      <option value="">Daisy Chain</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+  </div>
+
+  <h2>Available Models</h2>
+
+  <table id="results">
+    <thead>
+      <tr>
+        <th>Model</th>
+        <th>Family</th>
+        <th>Phase</th>
+        <th>Current</th>
+        <th>C13</th>
+        <th>C19</th>
+        <th>Mounting</th>
+        <th>Daisy</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+</section>
+
+<footer>
+  <div class="container">
+    © 2025 Smagtronics — SmagRack Selector
+  </div>
+</footer>
+
+<script>
+
+const products = [
+  {model:"SR-SP-16A-16C13-2C19-NDC-V", family:"Lite", phase:"Single", current:"16", c13:16, c19:2, mounting:"Vertical", daisy:"No"},
+  {model:"SR-SP-32A-20C13-4C19-DC-V", family:"Lite", phase:"Single", current:"32", c13:20, c19:4, mounting:"Vertical", daisy:"Yes"},
+  {model:"SR-TP-32A-24C13-4C19-NDC-V", family:"Lite", phase:"Three", current:"32", c13:24, c19:4, mounting:"Vertical", daisy:"No"},
+  {model:"SR-TP-32A-18C13-6C19-DC-H", family:"Lite", phase:"Three", current:"32", c13:18, c19:6, mounting:"Horizontal", daisy:"Yes"},
+
+  {model:"SR-TP-32A-24C13-4C19-DC-V", family:"Enterprise", phase:"Three", current:"32", c13:24, c19:4, mounting:"Vertical", daisy:"Yes"},
+  {model:"SR-TP-63A-24C13-6C19-DC-V", family:"Enterprise", phase:"Three", current:"63", c13:24, c19:6, mounting:"Vertical", daisy:"Yes"},
+  {model:"SR-TP-63A-20C13-6C19-DC-H", family:"Enterprise", phase:"Three", current:"63", c13:20, c19:6, mounting:"Horizontal", daisy:"Yes"},
+  {model:"SR-TP-32A-16C13-4C19-DC-H", family:"Enterprise", phase:"Three", current:"32", c13:16, c19:4, mounting:"Horizontal", daisy:"Yes"}
+];
+
+const tbody = document.querySelector("#results tbody");
+
+function renderTable(data){
+  tbody.innerHTML = "";
+  data.forEach(p => {
+    tbody.innerHTML += `
+      <tr>
+        <td>${p.model}</td>
+        <td>${p.family}</td>
+        <td>${p.phase}</td>
+        <td>${p.current}A</td>
+        <td>${p.c13}</td>
+        <td>${p.c19}</td>
+        <td>${p.mounting}</td>
+        <td>${p.daisy}</td>
+      </tr>`;
+  });
+}
+
+function filterProducts(){
+  const f = document.getElementById("family").value;
+  const ph = document.getElementById("phase").value;
+  const c = document.getElementById("current").value;
+  const m = document.getElementById("mounting").value;
+  const d = document.getElementById("daisy").value;
+
+  const filtered = products.filter(p =>
+    (!f || p.family === f) &&
+    (!ph || p.phase === ph) &&
+    (!c || p.current === c) &&
+    (!m || p.mounting === m) &&
+    (!d || p.daisy === d)
+  );
+
+  renderTable(filtered);
+}
+
+document.querySelectorAll("select").forEach(sel =>
+  sel.addEventListener("change", filterProducts)
+);
+
+renderTable(products);
+
+</script>
+
+</body>
+</html>
