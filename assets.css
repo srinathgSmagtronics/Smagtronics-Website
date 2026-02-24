@@ -183,3 +183,8 @@ footer {
   color: var(--color-muted);
 }
 
+section {
+  border-bottom: 1px solid var(--color-border);
+}
+
+
