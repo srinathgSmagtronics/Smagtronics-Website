@@ -108,22 +108,42 @@
 </section>
 
 <!-- ============================================================
-     LIVE DASHBOARD IFRAME
+     PRODUCT DEMO VIDEO
 ============================================================ -->
-<section id="live-demo" class="container" style="margin-top:40px;">
+<section class="container">
 
-  <h2 style="font-family:var(--font-heading); margin-bottom:14px;">
-    Live Interactive Demo
-  </h2>
+  <h2>Product Demonstration</h2>
 
-  <p class="text-muted">
-    Fully interactive dashboard embedded directly from GitHub Pages.
+  <p style="color:var(--color-muted); max-width:700px;">
+    See SmagWell Smart Bed monitoring in action. This demonstration
+    shows live vitals, alerts, posture tracking and nurse workflow integration.
   </p>
 
-  <div style="margin-top:20px; box-shadow:var(--shadow-card); border-radius:var(--radius); overflow:hidden;">
+  <div style="margin-top:30px; border:1px solid var(--color-border); border-radius:var(--radius); overflow:hidden;">
+    <video controls style="width:100%; height:auto; display:block;">
+      <source src="static/demo_dashboard.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+</section>
+
+
+<!-- ============================================================
+     LIVE DASHBOARD (INTERACTIVE)
+============================================================ -->
+<section id="live-demo" class="container">
+
+  <h2>Interactive Live Dashboard</h2>
+
+  <p style="color:var(--color-muted); max-width:700px;">
+    Explore the fully interactive hospital dashboard deployed via GitHub Pages.
+  </p>
+
+  <div style="margin-top:30px; border:1px solid var(--color-border); border-radius:var(--radius); overflow:hidden;">
     <iframe
       src="https://srinathgsmagtronics.github.io/Smagwell-Dashboard/"
-      style="width:100%; height:900px; border:none; border-radius:var(--radius); background:white;">
+      style="width:100%; height:800px; border:none;">
     </iframe>
   </div>
 
@@ -159,3 +179,4 @@
 
 </body>
 </html>
+
