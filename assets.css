@@ -187,4 +187,23 @@ section {
   border-bottom: 1px solid var(--color-border);
 }
 
+/* ===============================
+   LOGO CONTROL
+================================ */
+
+.logo-sm {
+  height: 32px;
+  width: auto;
+}
+
+.logo-md {
+  height: 40px;
+  width: auto;
+}
+
+.logo-lg {
+  height: 48px;
+  width: auto;
+}
+
 
