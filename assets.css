@@ -232,6 +232,44 @@ th:first-child {
   overflow-x: auto;
 }
 
+/* ===============================
+   DARK HERO VISUAL SYSTEM
+================================ */
+
+.hero-visual {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  background: rgba(8, 18, 28, 0.78);
+  padding: 120px 0;
+}
+
+.hero-visual h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero-visual p {
+  color: #d4dbe3;
+  font-size: 16px;
+  max-width: 720px;
+}
+
+.hero-visual .btn-outline {
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  background: transparent;
+}
+
+.hero-visual .btn-outline:hover {
+  border-color: var(--color-accent);
+}
 
 
 
